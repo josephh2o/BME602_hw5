@@ -40,4 +40,4 @@ def read_and_plot_spectrogram(file_name):
 
 
 # Replace 'your_wave_file.wav' with the path to your wave file
-read_and_plot_spectrogram("-k-.wav")
+read_and_plot_spectrogram("recordings/-k-.wav")

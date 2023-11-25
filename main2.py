@@ -44,7 +44,7 @@ def plot_fft_of_frame(file_name, start_time, duration):
 
 
 # Example usage
-file_name = "-k-.wav"  # Replace with your file path
+file_name = "recordings/-k-.wav"  # Replace with your file path
 start_time = 1.00  # Start time in seconds
 duration = .05  # Duration in seconds
 plot_fft_of_frame(file_name, start_time, duration)
