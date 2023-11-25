@@ -4,18 +4,26 @@ Joseph Ho, Karina Buttram
 ## Answers
 A. The speech recordings are [here](/recordings), which consist of a reading of the alphabet, and the sounds /f/ and /k/ for comparison.
 
-B. The code for the speech recognition is [here](/speech_processing.py).
+B. The code for the speech recognition is [here](/speech_analysis.py).
 
 C. 
 
-D. /f/ and /k/ sounds have differences in their frequency content. 
+D. /f/ and /k/ sounds have major differences in their frequencies and amplitudes.
 
-Here is the spectrogram for the /f/ sound:
+For the /f/ sound:
 
 ![spectrogram_f](figures/spectrogram_f.png)
 
-Here is the spectrogram for the /k/ sound:
+![avgAmpIndiv_f](figures/avgAmpIndiv_f.png)
+
+![avgAmpComb_f](figures/avgAmpComb_f.png)
+
+For the /k/ sound:
 
 ![spectrogram_k](figures/spectrogram_k.png)
+
+![avgAmpIndiv_k](figures/avgAmpIndiv_k.png)
+
+![avgAmpComb_k](figures/avgAmpComb_k.png)
 
 E.
