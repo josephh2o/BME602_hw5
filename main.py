@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy as sp
 import wave
 
 
@@ -12,15 +13,32 @@ def openfile(file_name):
         if wav_file.getnchannels() == 2:
             print("Stereo file detected, using only one channel.")
             signal = signal[::2]
-
-        fft_spectrum = np.fft.fft(signal)
-        freq = np.fft.fftfreq(len(fft_spectrum), 1 / rate)
-        return signal, freq, rate
+        return signal, rate
 
 
-def spectrogram(freq, rate, start_time, end_time):
+def fft(signal, fs):
+    Time = np.linspace(0, len(signal) / fs, num=len(signal))
+    fft_spectrum = np.fft.fft(signal)
+    freq = np.fft.fftfreq(len(fft_spectrum), 1 / fs)
+    return Time, fft_spectrum, freq
+
+
+def stft(signal, fs, start_time, end_time):
+    f, t, Zxx = sp.signal.stft(signal, fs=fs, nperseg=256)
     plt.figure(figsize=(12, 6))
-    plt.specgram(freq, Fs=rate, NFFT=1024, noverlap=900, cmap="jet")
+    plt.pcolormesh(t, f, 20 * np.log10(np.abs(Zxx)), shading="gouraud", cmap="gnuplot2")
+    plt.title("STFT Spectrogram")
+    plt.ylabel("Frequency (Hz)")
+    plt.xlabel("Time (sec)")
+    plt.xlim(start_time, end_time)
+    plt.ylim(0, 8000)
+    plt.colorbar(label="Intensity (dB)")
+    plt.show()
+
+
+def spectrogram(freq, fs, start_time, end_time):
+    plt.figure(figsize=(12, 6))
+    plt.specgram(freq, Fs=fs, NFFT=1024, noverlap=900, cmap="gnuplot2")
     plt.xlabel("Time")
     plt.ylabel("Frequency")
     plt.title("Spectrogram")
@@ -30,10 +48,8 @@ def spectrogram(freq, rate, start_time, end_time):
     plt.show()
 
 
-signal_k, freq_k, rate_k = openfile("-k-.wav")
-plt.figure(figsize=(12, 6))
-plt.plot(signal_k)
-plt.show()
+signal_k, fs_k = openfile("-k-.wav")
 t0_k = 0.95
 t1_k = 1.20
-spectrogram(signal_k, rate_k, t0_k, t1_k)
+stft(signal_k, fs_k, t0_k, t1_k)
+spectrogram(signal_k, fs_k, t0_k, t1_k)
