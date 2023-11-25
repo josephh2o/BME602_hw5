@@ -39,17 +39,38 @@ def stft(signal, fs, start_time, end_time):
 def spectrogram(freq, fs, start_time, end_time):
     plt.figure(figsize=(12, 6))
     plt.specgram(freq, Fs=fs, NFFT=1024, noverlap=900, cmap="gnuplot2")
-    plt.xlabel("Time")
-    plt.ylabel("Frequency")
+    plt.clim(0, 50)
+    plt.xlabel("Time (sec)")
+    plt.ylabel("Frequency (Hz)")
     plt.title("Spectrogram")
     plt.xlim(start_time, end_time)
     plt.ylim(0, 8000)
-    plt.colorbar(label="Intensity [dB]")
+    plt.colorbar(label="Intensity (dB)")
     plt.show()
 
 
+# Open /k/ speech sound file
 signal_k, fs_k = openfile("recordings/-k-.wav")
 t0_k = 0.95
-t1_k = 1.20
-stft(signal_k, fs_k, t0_k, t1_k)
+t1_k = 1.15
+
+# Plot Spectrogram of /k/ sound
 spectrogram(signal_k, fs_k, t0_k, t1_k)
+
+# Open /f/ speech sound file
+signal_f, fs_f = openfile("recordings/-f-.wav")
+t0_f = 1.08
+t1_f = 1.45
+
+# Plot Spectrogram of /f/ sound
+spectrogram(signal_f, fs_f, t0_f, t1_f)
+
+# open alphabet speech sound file
+signal_alphabet, fs_alphabet = openfile("recordings/alphabet.wav")
+t0_alphabet = 5
+t1_alphabet = 10
+
+# Plot Spectrogram of alphabet sound
+spectrogram(signal_alphabet, fs_alphabet, t0_alphabet, t1_alphabet)
+
+# stft(signal_k, fs_k, t0_k, t1_k)
