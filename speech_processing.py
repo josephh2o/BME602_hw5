@@ -66,11 +66,11 @@ t1_f = 1.45
 spectrogram(signal_f, fs_f, t0_f, t1_f)
 
 # open alphabet speech sound file
-signal_alphabet, fs_alphabet = openfile("recordings/alphabet.wav")
-t0_alphabet = 5
-t1_alphabet = 10
+signal_alpha, fs_alpha = openfile("recordings/alpha.wav")
+t0_alpha = 0
+t1_alpha = 23
 
 # Plot Spectrogram of alphabet sound
-spectrogram(signal_alphabet, fs_alphabet, t0_alphabet, t1_alphabet)
+spectrogram(signal_alpha, fs_alpha, t0_alpha, t1_alpha)
 
 # stft(signal_k, fs_k, t0_k, t1_k)
