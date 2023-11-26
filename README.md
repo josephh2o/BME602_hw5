@@ -2,9 +2,9 @@
 Joseph Ho, Karina Buttram
 
 ## Answers
-**A.** The speech recordings are [here](/recordings), which consist of a reading of the alphabet, and the sounds /f/ and /k/ for comparison.
+**A.** The speech recordings are located [here](/recordings), which consist of a reading of the alphabet, and the sounds /f/ and /k/ for comparison.
 
-**B.** The code for the speech analysis is [here](/speech_analysis.py).
+**B.** The code for the speech analysis is located [here](/speech_analysis.py).
 
 **C.** In the code for the speech analysis, there are 10 speech features that are extracted from the speech recordings. These features include average amplitude of a frequency range determined by 10 fifth-order Butter bandpass filters from 0 to 8000 Hz. Every 5 ms, the fast fourier transform (fft) function is performed on the speech signal, and the average amplitude of the frequency range is calculated.
 
@@ -18,9 +18,9 @@ Shown below are the spectrogram, average amplitude of individual frequency range
 
 **D.** /f/ and /k/ sounds have major differences in their frequencies and amplitudes.
 
-For the /f/ sound, the highest average amplitudes occur in the range of 7200-8000 Hz, 6400-7200 Hz and 5600-6400 Hz. In these signals, the peak of the average amplitude in the middle of the /f/ sound. Comparatively, the /k/ sound has the highest average amplitudes in the range of 120-800 Hz, 800-1600 Hz, andn 4000-4800 Hz. The peak of the average amplitude occurs near the beginning of the /k/ sound. 
+For the /f/ sound, the highest average amplitudes occur in the range of 7200-8000 Hz, 6400-7200 Hz and 5600-6400 Hz. In these signals, the peak of the average amplitude is in the middle of the /f/ sound. Comparatively, the /k/ sound has the highest average amplitudes in the range of 120-800 Hz, 800-1600 Hz, andn 4000-4800 Hz. The peak of the average amplitude occurs near the beginning of the /k/ sound. 
 
-Spectrogram, average amplitude of individual frequency ranges, and average amplitude of combined frequency ranges for the /f/ sound.
+/f/ sound spectrogram, average amplitude of individual frequency ranges, and average amplitude of combined frequency ranges.
 
 ![spectrogram_f](figures/spectrogram_f.png)
 
@@ -28,7 +28,7 @@ Spectrogram, average amplitude of individual frequency ranges, and average ampli
 
 ![avgAmpComb_f](figures/avgAmpComb_f.png)
 
-Spectrogram, average amplitude of individual frequency ranges, and average amplitude of combined frequency ranges for the /k/ sound.
+/k/ sound spectrogram, average amplitude of individual frequency ranges, and average amplitude of combined frequency ranges.
 
 ![spectrogram_k](figures/spectrogram_k.png)
 
