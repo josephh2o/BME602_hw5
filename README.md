@@ -36,6 +36,6 @@ Spectrogram, average amplitude of individual frequency ranges, and average ampli
 
 ![avgAmpComb_k](figures/avgAmpComb_k.png)
 
-**E.**
+**E.** Conceptual Algorithm for a Cochlear Implant
 
 ![BME602_Homework5Figure1_JosephHo.png](figures/BME602_Homework5Figure1_JosephHo.png)
