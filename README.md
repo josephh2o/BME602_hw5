@@ -18,7 +18,7 @@ Shown below are the spectrogram, average amplitude of individual frequency range
 
 **D.** /f/ and /k/ sounds have major differences in their frequencies and amplitudes.
 
-For the /f/ sound, the highest average amplitudes occur in the range of 7200-8000 Hz, 6400-7200 Hz and 5600-6400 Hz. In these signals, the peak of the average amplitude is in the middle of the /f/ sound. Comparatively, the /k/ sound has the highest average amplitudes in the range of 120-800 Hz, 800-1600 Hz, andn 4000-4800 Hz. The peak of the average amplitude occurs near the beginning of the /k/ sound. 
+For the /f/ sound, the highest average amplitudes occur in the range of 7200-8000 Hz, 6400-7200 Hz and 5600-6400 Hz. In these signals, the peak of the average amplitude is in the middle of the /f/ sound. Comparatively, the /k/ sound has the highest average amplitudes in the range of 120-800 Hz, 800-1600 Hz, and 4000-4800 Hz. The peak of the average amplitude occurs near the beginning of the /k/ sound. 
 
 /f/ sound spectrogram, average amplitude of individual frequency ranges, and average amplitude of combined frequency ranges.
 
