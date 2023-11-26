@@ -6,7 +6,7 @@ Joseph Ho, Karina Buttram
 
 **B.** The code for the speech analysis is located [here](/speech_analysis.py).
 
-**C.** In the code for the speech analysis, there are 10 speech features that are extracted from the speech recordings. These features include average amplitude of a frequency range determined by 10 fifth-order Butter bandpass filters from 0 to 8000 Hz. Every 5 ms, the fast fourier transform (fft) function is performed on the speech signal, and the average amplitude of the frequency range is calculated.
+**C.** In the code for the speech analysis, there are 10 speech features that are extracted from the speech recordings. These features include average amplitude of a frequency range determined by 10 fifth-order Butter bandpass filters from 0 to 8000 Hz. Every 5 ms, the Fast Fourier Transform (FFT) function is performed on the speech signal, and the average amplitude of the frequency range is calculated.
 
 Shown below are the spectrogram, average amplitude of individual frequency ranges, and average amplitude of combined frequency ranges for the alphabet.
 
